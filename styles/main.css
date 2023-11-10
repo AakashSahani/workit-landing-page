@@ -75,16 +75,51 @@ h6 {
 	isolation: isolate;
 }
 
+/* Utilities */
+/* Primary Button Design */
+button {
+	background-color: var(--eucaplyptus);
+	border: 2px solid var(--eucaplyptus);
+	padding: 1rem;
+	border-radius: 0.25rem;
+	transition: ease-in-out;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: var(--dark-purple);
+	color: var(--eucaplyptus);
+	border-color: var(--eucaplyptus);
+}
+
+.button-secondary {
+	border: none;
+	border-radius: 0;
+	border-bottom: 2px solid var(--eucaplyptus);
+	color: var(--white);
+	background-color: transparent;
+	transition: border-width 0.3s ease;
+}
+
+.button-secondary:hover {
+	cursor: pointer;
+	color: var(--eucaplyptus);
+}
+
 /* Styling */
 
+/* Main Body */
 body {
 	font-family: 'Fraunces', serif;
 }
 
+/* Header Section*/
 header {
 	display: flex;
 	flex-flow: row;
 	justify-content: space-between;
+	padding: 1rem;
+	align-items: center;
 }
 
 header,
@@ -93,7 +128,108 @@ header,
 	color: var(--white);
 }
 
-button {
-	background-color: var(--eucaplyptus);
-	border: 1px solid var(--eucaplyptus);
+/* Hero Section */
+.hero {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	text-align: center;
+	justify-content: space-evenly;
+	row-gap: 1rem;
+	padding: 2rem;
+	/* Curved Background */
+	border-bottom-left-radius: 200% 20%;
+	border-bottom-right-radius: 200% 20%;
+}
+
+.hero h1 {
+	font-weight: 600;
+	font-size: 2.5rem;
+}
+
+/* Features Section */
+.features {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: var(--ghost-white);
+	padding: 1rem;
+	padding-bottom: 3rem;
+	margin: 1rem 0;
+
+	/* Curved Background */
+	border-bottom-left-radius: 150% 15%;
+	border-bottom-right-radius: 150% 15%;
+}
+
+.feature-container {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	row-gap: 1rem;
+	margin: 1rem;
+}
+
+.feature-container > span {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	border: 1px solid black;
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+}
+
+/* Introduction Section */
+.introduction,
+.text-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	background-color: var(--white);
+}
+
+.text-container {
+	background-color: var(--dark-purple);
+	color: var(--white);
+	padding: 2rem;
+	font-weight: 400;
+	margin: 0 1rem;
+	row-gap: 1rem;
+	text-align: center;
+	text-wrap: wrap;
+}
+
+.text-container h3 {
+	font-weight: 600;
+	font-size: 2rem;
+}
+
+/* Footer Section */
+footer {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 1rem;
+}
+
+footer > * {
+	margin: 1rem;
+}
+
+footer .socials {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+}
+
+footer .socials > * {
+	margin: 1rem;
 }
