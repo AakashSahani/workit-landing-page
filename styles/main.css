@@ -108,6 +108,8 @@ button:hover {
 
 /* Styling */
 
+/* Mobile */
+
 /* Main Body */
 body {
 	font-family: 'Fraunces', serif;
@@ -147,6 +149,14 @@ header,
 	font-size: 2.5rem;
 }
 
+.image-container {
+	padding: 1rem;
+}
+
+.hero .image-container {
+	margin-bottom: -40%;
+}
+
 /* Features Section */
 .features {
 	display: flex;
@@ -154,9 +164,8 @@ header,
 	align-items: center;
 	justify-content: space-evenly;
 	background-color: var(--ghost-white);
-	padding: 1rem;
+	padding: 10rem 0 3rem 0;
 	padding-bottom: 3rem;
-	margin: 1rem 0;
 
 	/* Curved Background */
 	border-bottom-left-radius: 150% 15%;
@@ -195,6 +204,12 @@ header,
 	background-color: var(--white);
 }
 
+.introduction .image-container {
+	padding: 3rem;
+	padding-bottom: 0;
+	margin-bottom: -12%;
+}
+
 .text-container {
 	background-color: var(--dark-purple);
 	color: var(--white);
@@ -218,6 +233,7 @@ footer {
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 1rem;
+	max-height: fit-content;
 }
 
 footer > * {
@@ -233,3 +249,27 @@ footer .socials {
 footer .socials > * {
 	margin: 1rem;
 }
+
+/* Tablet */
+@media (min-width: 620px) {
+	.introduction {
+		flex-flow: row;
+		align-items: flex-end;
+		border: 1px solid black;
+	}
+	.introduction .image-container {
+		border: 1px solid black;
+		padding: 0;
+		margin: 0;
+	}
+
+	.introduction .text-container {
+		align-items: flex-start;
+		text-align: left;
+	}
+	.introduction .text-container button {
+		padding: 0.5rem;
+	}
+}
+
+/* Desktop */
